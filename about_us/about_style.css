@@ -1,0 +1,206 @@
+/* Keeping your existing CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    background-color: #EEF0F2;
+}
+
+
+
+
+
+/* Your existing navbar CSS remains unchanged */
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 12vh;
+    background-color: #eef0f2b3;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    border-bottom: 2.5px solid #E0E0E0;
+}
+
+nav .logo img {
+    width: 11vw;
+}
+
+nav .menu {
+    display: flex;
+    gap: 9vw;
+    align-items: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #6f6f6f;
+}
+
+
+
+/*About us card*/
+.card-hover {
+    transition: transform 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/*Scroll Down button*/
+.text{
+    font-size: 1.1vw;
+    z-index: 99;
+    a{
+        text-decoration: none;
+        color: #101010;
+        display: flex;
+        font-size: 1.1vw;
+        gap: .8vw;
+
+        i{
+            font-size: 1.2vw;
+            transition: margin-top .5s;
+        }
+    }
+
+    a:hover>i{
+        margin-top: 2.5vh;
+    }
+}
+
+
+
+/* Custom Styles for the Department Section */
+#department img {
+    max-width: 100%;
+    height: auto;
+}
+  
+
+
+
+/* Font classes from your existing CSS */
+.use {
+    font-family: 'Exo 2', sans-serif;
+}
+.user {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+
+
+
+/* Our value card animation*/
+
+.value-card {
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.parallax-image {
+    transition: transform 0.2s ease-out;
+}
+
+
+
+
+
+
+
+
+/* Essential perspective setup */
+.team-card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Card inner container */
+.team-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flipped state */
+.team-card.flipped .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card faces */
+.team-card-front,
+.team-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Back face rotation */
+.team-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Additional styles for smooth animation */
+.team-card-inner * {
+    user-select: none;
+}
+
+/* Ensure content stays within bounds */
+.team-card-front,
+.team-card-back {
+    width: 100%;
+    height: 100%;
+}
+
+/* Fix for Safari */
+.team-card,
+.team-card-inner,
+.team-card-front,
+.team-card-back {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
