@@ -183,6 +183,7 @@ window.addEventListener("resize", () => handleResize(matterContainer));
 }
 matter();
 
+
 function rippleEffect(){
     $('#home').ripples({
         resolution: 512,
