@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #DBDBDB;
+}
+
+.use {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.user {
+  font-family: 'Inter', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 12vh;
+  background-color: #eef0f2b3;
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+  border-bottom: 2.5px solid #E0E0E0;
+}
+
+nav .logo img {
+  width: 11vw;
+}
+
+nav .menu {
+  display: flex;
+  gap: 9vw;
+  align-items: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #6f6f6f;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}
+
+.box .box_head {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 200px;
+  width: 450px;
+  font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 14px;
+  margin-top: 10px; 
+  line-height: 1;
+}
+
+.box .box_test {
+  background-color: #555;
+  color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  transition: height 0.6s ease-in-out, padding 0.6s ease-in-out;
+}
+
+.box .box_test p {
+  padding: 15px;
+}
+
+/*.box:hover .box_head {
+  background-color: #444;
+}*/
+
+.know-more-btn {
+  position: absolute;
+  bottom:40px;
+  left: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.know-more-btn:hover {
+  background-color: #2980b9;
+}
+
