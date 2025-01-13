@@ -1,27 +1,52 @@
 const carousel = document.querySelector(".carousel");
 const cards = document.querySelectorAll(".card");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
 
 // Variables for drag scrolling
 let isDown = false;
 let startX;
 let scrollLeft;
 
-function activateCard(index) {
-    cards.forEach((card) => card.classList.remove("active"));
-    cards[index].classList.add("active");
-    
-    const card = cards[index];
-    const carouselRect = carousel.getBoundingClientRect();
-    const cardRect = card.getBoundingClientRect();
-    
-    const scrollLeft = carousel.scrollLeft + cardRect.left - 
-                      carouselRect.left - 
-                      (carouselRect.width - cardRect.width) / 2;
-    
-    carousel.scrollTo({
-        left: scrollLeft,
-        behavior: 'smooth'
-    });
+// Function to toggle a card's active state
+function toggleCard(index) {
+    const selectedCard = cards[index];
+    const description = selectedCard.querySelector(".card-description");
+
+    if (selectedCard.classList.contains("active")) {
+        // If the card is already active, remove the active state
+        selectedCard.classList.remove("active");
+        description.style.display = 'none';
+        description.style.opacity = '0';
+        description.style.visibility = 'hidden';
+    } else {
+        // Deactivate all other cards first
+        cards.forEach((card) => {
+            card.classList.remove("active");
+            const otherDescription = card.querySelector(".card-description");
+            otherDescription.style.display = 'none';
+            otherDescription.style.opacity = '0';
+            otherDescription.style.visibility = 'hidden';
+        });
+
+        // Activate the selected card
+        selectedCard.classList.add("active");
+        description.style.display = 'block';
+        description.style.opacity = '1';
+        description.style.visibility = 'visible';
+
+        // Center the card in the carousel
+        const carouselRect = carousel.getBoundingClientRect();
+        const cardRect = selectedCard.getBoundingClientRect();
+        const scrollLeft = carousel.scrollLeft + cardRect.left - 
+                          carouselRect.left - 
+                          (carouselRect.width - cardRect.width) / 2;
+
+        carousel.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+        });
+    }
 }
 
 // Mouse wheel scrolling
@@ -58,31 +83,24 @@ carousel.addEventListener('mousemove', (e) => {
 
 // Card click handling
 cards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-        if (card.classList.contains("active")) {
-            card.classList.remove("active");
-        } else {
-            activateCard(index);
-        }
-    });
+    card.addEventListener("click", () => toggleCard(index));
 });
-const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
 
+// Scroll amount for arrows
 const scrollAmount = 300; // Amount to scroll when an arrow is clicked
 
 // Left arrow functionality
 leftArrow.addEventListener("click", () => {
-  carousel.scrollBy({
-    left: -scrollAmount,
-    behavior: "smooth",
-  });
+    carousel.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+    });
 });
 
 // Right arrow functionality
 rightArrow.addEventListener("click", () => {
-  carousel.scrollBy({
-    left: scrollAmount,
-    behavior: "smooth",
-  });
+    carousel.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+    });
 });
