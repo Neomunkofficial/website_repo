@@ -2,6 +2,9 @@ const carousel = document.querySelector(".carousel");
 const cards = document.querySelectorAll(".card");
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
+var box=document.querySelectorAll(".box");
+
+
 
 // Variables for drag scrolling
 let isDown = false;
@@ -104,3 +107,9 @@ rightArrow.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+
+for(let i=0;i<box.length;i++){
+    box[i].addEventListener("click",function(){
+        this.classList.toggle("active");
+    })
+}
