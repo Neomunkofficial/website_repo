@@ -804,11 +804,23 @@
   .section6{
     height: 200vh;
   }
+  .section4{
+   
+  }
+.section5{
+  margin-top:80vh;
+}
+
   .section7{
     height: 50vh;
+    margin-top: 30vh;
     
   }
+  .section8{
+  
+  }
   .section9{
+  margin-top: 60vh;
     /* background-color: firebrick; */
   .bottom {
       .scroller {
@@ -819,7 +831,13 @@
     }
   }
 }
+.section10{
+ 
+}
 .section11{
+  margin-bottom: 14vh;  /* or any appropriate value */
+  
+  
   #page{
   padding: 2vh 2vw 2vh 2vw;
     /* background-color: rgb(0, 115, 255); */
@@ -828,6 +846,10 @@
 
   .one{
     border-top: 1px solid #1010103c;
+    .use{
+      margin-bottom: 2vh;
+      line-height: 2vh;
+    }
   }
  
   .left{
@@ -846,6 +868,7 @@
       br{
         display: none;
       }
+     
     }
     h5{
       font-size: 3.6vw !important;
@@ -961,7 +984,22 @@
       
     }
   }
+  
 }
+}
+
+.section12{
+  .line1{
+    margin-top: 25vh;
+  }
+ 
+  
+}
+
+.section13{
+  .top{
+    margin-top:15vh
+  }
 }
 @media (max-width:680px) {
   .hero{
