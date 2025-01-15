@@ -232,3 +232,13 @@ html.has-scroll-smooth {
     opacity: 1;
     transform: translateY(0);
 }
+
+#cursor {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed; /* Ensure it is fixed in the viewport */
+    z-index: 99;
+    pointer-events: none; /* This ensures the custom cursor doesn't interfere with other interactions */
+}
