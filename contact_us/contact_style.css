@@ -12,12 +12,24 @@
 
 
 
+/*Locimitive scroll css*/
 html.has-scroll-smooth {
   overflow: hidden;
 }
 .main {
   overflow: hidden;
   position: relative;
+}
+/* Optional: Add smooth reveal animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.is-revealed .fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -38,7 +50,6 @@ html.has-scroll-smooth {
 
 
 
-/* Ensure the main content stays above the ripple effect */
 
 
 
@@ -57,7 +68,6 @@ html.has-scroll-smooth {
 
 
 /* Our value card animation*/
-
 .value-card {
   transition: transform 0.3s ease;
 }

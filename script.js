@@ -1279,15 +1279,15 @@ let services = [
     { h5: "05", h3: "CI/CD <br>Pipelines", p: "Jenkins, GitLab, <br> GitHub Actions"},
     { h5: "06", h3: "Infrastructure <br>as Code ", p: "Terraform,  <br> Ansible, Pulumi <br> "},
     { h5: "07", h3: "Containerization <br>& Orchestration ", p: "Docker, Kubernetes,<br> Docker Swarm"},
-    { h5: "08", h3: "DevOps Consulting<br> & Training", p: ""},
+    { h5: "08", h3: "DevOps Consulting<br> ", p: ""},
     { h5: "09", h3: "Custom <br>Web Development ", p: "React, Angular,<br> Vue.js, Node.js, Python/Django"},
     { h5: "10", h3: "E-commerce <br>Solutions ", p: "Magento, Shopify,<br> WooCommerce"},
-    { h5: "11", h3: "Progressive Web <br>Apps (PWA) ", p: "o	React, Angular, <br>Vue.js"},
+    { h5: "11", h3: "Progressive Web <br>Apps (PWA) ", p: "React, Angular, <br>Vue.js"},
     { h5: "12", h3: "API Development<br> & Integration ", p: "RESTful APIs, GraphQL, <br>OpenAPI"},
     { h5: "13", h3: "iOS & Android App<br> Development  ", p: "Swift, Kotlin,<br> React Native, Flutter"},
-    { h5: "14", h3: "Cross-Platform App Development  ", p: "o	React Native, Flutter,<br> Xamarin"},
+    { h5: "14", h3: "Cross-Platform App Development  ", p: "React Native, Flutter,<br> Xamarin"},
     { h5: "15", h3: "Mobile App UI/UX Design ", p: "Figma, Sketch, <br>Adobe XD"},
-    { h5: "16", h3: "Mobile App Testing & QA  ", p: "o	Appium, Espresso,<br> XCTest"},
+    { h5: "16", h3: "Mobile App Testing & QA  ", p: "Appium, Espresso,<br> XCTest"},
     
 
  ];

@@ -212,8 +212,7 @@ nav a:hover {
 
 
 
-
-/*Locomotive scroll css */
+/*Locimitive scroll css*/
 html.has-scroll-smooth {
     overflow: hidden;
 }

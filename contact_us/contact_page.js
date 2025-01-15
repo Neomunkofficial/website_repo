@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//Locomotive Scroll
 function initLocomotive() {
     gsap.registerPlugin(ScrollTrigger);
     
@@ -82,7 +81,7 @@ function initLocomotive() {
     // Each time Locomotive Scroll updates, tell ScrollTrigger to update too
     locoScroll.on("scroll", ScrollTrigger.update);
 
-    // Tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    // Tell ScrollTrigger to use these proxy methods for the ".main" element
     ScrollTrigger.scrollerProxy(".main", {
         scrollTop(value) {
             return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -100,11 +99,8 @@ function initLocomotive() {
 
     // Each time the window updates, refresh ScrollTrigger and then update LocomotiveScroll
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-    // After everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
 }
-
 // Initialize when the DOM is ready
 document.addEventListener('DOMContentLoaded', initLocomotive);
 

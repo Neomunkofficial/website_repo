@@ -85,16 +85,22 @@ nav a:hover {
     border-radius: 8px;
 }
 
-.branding-icon {
-    background: linear-gradient(45deg, #4A00E0, #8E2DE2);
+.discover-icon {
+    background: linear-gradient(45deg, #4A90E2, #8e44ad);
 }
 
-.webdesign-icon {
-    background: linear-gradient(45deg, #00F260, #0575E6);
+.define-icon {
+    background: linear-gradient(45deg, #1ABC9C, #2ECC71);
 }
 
-.development-icon {
-    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+.design-icon {
+    background: linear-gradient(45deg, #E91E63, #F06292);
+}
+.develop-icon {
+    background: linear-gradient(45deg, #F39C12, #F5B041);
+}
+.delivery-icon {
+    background: linear-gradient(45deg, #F1C40F, #F7DC6F);
 }
 
 /* Updated accordion styles */
@@ -312,3 +318,68 @@ html.has-scroll-smooth {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
+/*Button color change*/
+.button {
+    margin-top: 2vh;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: #111827;
+    color: #fff;
+    border-radius: 10rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: .75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+    border: 1px solid #101010;
+    z-index: 99;
+  }
+
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: #111827;
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid #101010;
+  }
+  
+  .button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #101010;
+  }
+  
+  .button:hover .button__icon-wrapper {
+    color: #000;
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+  }
