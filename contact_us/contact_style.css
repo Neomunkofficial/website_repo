@@ -9,8 +9,31 @@
   ;
 }
 
+
+
+/*Locomotive scroll css */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+.main {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+
 .foot{
   background-color: #31414f;
+}
+
+
+[data-scroll-container] {
+  overflow: hidden;
+}
+
+[data-scroll-section] {
+  position: relative;
 }
 
 
@@ -100,6 +123,7 @@ nav a {
 nav a:hover {
   color: #6f6f6f;
 }
+
 
 
 

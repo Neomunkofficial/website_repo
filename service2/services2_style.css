@@ -1,0 +1,314 @@
+/* Keeping your existing CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    background-color: #EEF0F2;
+}
+.yobody {
+    background-color: gray;
+}
+
+
+
+
+
+.foot{
+    background-color: #31414f;
+}
+
+
+
+
+/* Your existing navbar CSS remains unchanged */
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 12vh;
+    background-color: #eef0f2b3;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    border-bottom: 2.5px solid #E0E0E0;
+}
+nav .logo img {
+    width: 11vw;
+}
+nav .menu {
+    display: flex;
+    gap: 9vw;
+    align-items: space-between;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #6f6f6f;
+}
+
+
+
+
+
+
+
+/* Font classes from your existing CSS */
+.use {
+    font-family: 'Exo 2', sans-serif;
+}
+.user {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+
+
+
+
+
+/* How we works section  */
+.service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.branding-icon {
+    background: linear-gradient(45deg, #4A00E0, #8E2DE2);
+}
+
+.webdesign-icon {
+    background: linear-gradient(45deg, #00F260, #0575E6);
+}
+
+.development-icon {
+    background: linear-gradient(45deg, #FF416C, #FF4B2B);
+}
+
+/* Updated accordion styles */
+.accordion-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.accordion-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.chevron.active {
+    transform: rotate(180deg);
+}
+
+/* Adding slide animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accordion-content.active {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+.parallax-section {
+    min-height: 100vh;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1;
+    max-width: 300px;
+    min-height: 300px;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    cursor: pointer;
+}
+
+.card-preview {
+    height: 100%;
+    padding: 2rem;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    overflow-y: auto;
+}
+
+.card.expanded {
+    position: absolute;
+    width: 80vw;
+    max-width: 1200px;
+    height: 80vh;
+    z-index: 20;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.card.expanded .card-preview {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card.expanded .card-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card.shifted-left {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0.6;
+}
+
+.card.shifted-right {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0.6;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.close-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        min-height: 300px;
+    }
+
+    .card.expanded {
+        width: 90vw;
+        height: 90vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+.main {
+    overflow: hidden;
+    position: relative;
+}
+/* Optional: Add smooth reveal animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.is-revealed .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -11,7 +11,7 @@
 
 .foot{
     background-color: #31414f;
-  }
+}
 
 
 
@@ -207,4 +207,28 @@ nav a:hover {
 .team-card-back {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+}
+
+
+
+
+
+/*Locomotive scroll css */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+.main {
+    overflow: hidden;
+    position: relative;
+}
+/* Optional: Add smooth reveal animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.is-revealed .fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }

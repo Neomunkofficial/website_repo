@@ -31,3 +31,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+
+function initLocomotive() {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Initialize Locomotive Scroll
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".main"),
+        smooth: true,
+        multiplier: 1,
+        class: "is-revealed",
+        getDirection: true,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
+    });
+
+    // Each time Locomotive Scroll updates, tell ScrollTrigger to update too
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    // Tell ScrollTrigger to use these proxy methods for the ".main" element
+    ScrollTrigger.scrollerProxy(".main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        },
+        pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+    });
+
+    // Each time the window updates, refresh ScrollTrigger and then update LocomotiveScroll
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+}
+
+// Initialize when the DOM is ready
+document.addEventListener('DOMContentLoaded', initLocomotive);
