@@ -1,4 +1,5 @@
 // Store selected values
+import $ from 'jquery'
 let selectedServices = new Set();
 let selectedBudget = 'More than 50K'; // Default value
 
@@ -54,3 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function rippleEffect(){
+    $('#header').ripples({
+        resolution: 512,
+        dropRadius: 20,
+        perturbance: 0.04
+      });
+}
+
+if(width>1200){
+    rippleEffect();
+}
+
+if(width>550){                                                
+    Shery.mouseFollower({
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        skew: true,
+        duration: 1,
+    });
+    
+}

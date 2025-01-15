@@ -252,7 +252,7 @@ function loading(){
     })
 }
 
-if(width>550){
+if(width>550){                                                
     Shery.mouseFollower({
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         skew: true,
@@ -1260,18 +1260,24 @@ canvasVideo();
 
 
 let services = [
-    { h5: "01", h3: "Cloud Provider", p: "Amazon AWS, <br> Microsoft Azure, GCP "},
-    { h5: "02", h3: "CI/CD", p: "Jenkins, GitLab, <br> GitHub, Git"},
-    { h5: "03", h3: "Infrastructure <br> provisioning", p: "Terraform, Pulumi, <br> AWS CloudFormation <br> and other"},
-    { h5: "04", h3: "Configuration <br> management", p: "Ansible, Chef, <br> Puppet"},
-    { h5: "05", h3: "Web Development", p: "Front-end, Back-end, <br> Full-stack Development"},
-    { h5: "06", h3: "Database", p: "Oracle, MySQL, Mango DB, <br> PostgresSQl, MS <br> SQL and other"},
-    { h5: "07", h3: "Business Process <br> Automation", p: "RPA and BPM"},
-    { h5: "08", h3: "Containers & <br> Orchestration", p: "Docker, K8s, wpar, <br> zone and other"},
-    { h5: "09", h3: "Big Data & <br> Data Analytics", p: "Data science, Wide <br> range of data analysis <br> services"},
-    { h5: "10", h3: "Services", p: "RabbitMQ, Apache <br> Kafka, Apache, Redis, <br> ELK stack and other"},
-    { h5: "11", h3: "Cloud Migration", p: "We will develop a migration strategy <br> without data loss and downtime for <br> your business"},
-    { h5: "12", h3: "Monitoring", p: "Prometheus, Datalog, Grafana, <br> Azure monitor, Amazon <br> CloudWatch, Zabbix and other"},
+    { h5: "01", h3: "Cloud Consulting<br>&Strategy", p: "Amazon AWS, <br> Microsoft Azure, GCP "},
+    { h5: "02", h3: "Cloud Migration<br>&Implementation", p: "Jenkins, GitLab, <br> GitHub, Git"},
+    { h5: "03", h3: "Cloud Infrastructure <br>Managment", p: "Terraform, Ansible, <br> AWS CloudFormation <br> and other"},
+    { h5: "04", h3: "Cloud Security <br> &Compilance", p: "AWS Security Hub, Azure Security Center, <br> GCP Security Command Center"},
+    { h5: "05", h3: "CI/CD <br>Pipelines", p: "Jenkins, GitLab, <br> GitHub Actions"},
+    { h5: "06", h3: "Infrastructure <br>as Code ", p: "Terraform,  <br> Ansible, Pulumi <br> "},
+    { h5: "07", h3: "Containerization <br>& Orchestration ", p: "Docker, Kubernetes,<br> Docker Swarm"},
+    { h5: "08", h3: "DevOps Consulting<br> & Training", p: ""},
+    { h5: "09", h3: "Custom <br>Web Development ", p: "React, Angular,<br> Vue.js, Node.js, Python/Django"},
+    { h5: "10", h3: "E-commerce <br>Solutions ", p: "Magento, Shopify,<br> WooCommerce"},
+    { h5: "11", h3: "Progressive Web <br>Apps (PWA) ", p: "o	React, Angular, <br>Vue.js"},
+    { h5: "12", h3: "API Development<br> & Integration ", p: "RESTful APIs, GraphQL, <br>OpenAPI"},
+    { h5: "13", h3: "iOS & Android App<br> Development  ", p: "Swift, Kotlin,<br> React Native, Flutter"},
+    { h5: "14", h3: "Cross-Platform App Development  ", p: "o	React Native, Flutter,<br> Xamarin"},
+    { h5: "15", h3: "Mobile App UI/UX Design ", p: "Figma, Sketch, <br>Adobe XD"},
+    { h5: "16", h3: "Mobile App Testing & QA  ", p: "o	Appium, Espresso,<br> XCTest"},
+    
+
  ];
 
 function servicesDetails() {

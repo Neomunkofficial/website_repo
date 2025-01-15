@@ -13,12 +13,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/contact_us/contact_style.css">
+   
 </head>
 
-<body class="">
+<body >
+    
 
-    <!--Navingation bar-->
-    <nav>
+    <nav id="nav">
         <div class="logo">
           <img src="/imgs/Logo_Hz_Trans.png" alt="logo">
         </div>
@@ -34,14 +35,14 @@
     </nav>  
 
     <!--Header-->
-    <header class="relative use h-[310px] transition-height duration-700 ease-in-out bg-gray-400 bg-opacity-50 bg-cover bg-center" style="background-image: url('/imgs/info1/i\ \(1\).jpg')">
+    <header id="header" class="relative use h-[310px] transition-height duration-700 ease-in-out bg-gray-400 bg-opacity-50 bg-cover bg-center" style="background-image: url('/imgs/info1/i\ \(1\).jpg')">
         <h1 class="absolute inset-0 flex items-center justify-start px-5 text-8xl font-bold text-gray-200 transform transition-all duration-700 hover:scale-95">
           Hire Us
         </h1>
     </header>
 
     <!--Grey Part-->
-    <main class="body mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-15">
+    <main id="main" class="body mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-15">
 
         <!-- Contact Section -->
         <div class="transition-all duration-700 hover:-translate-y-1">
@@ -167,7 +168,7 @@
 
 
     <!-- Our Values Section -->
-    <section class="py-16 px-4 md:px-7 bg-gray-800 lg:px-16 ">
+    <section id="section" class="py-16 px-4 md:px-7 bg-gray-800 lg:px-16 ">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-12 fade-in">
@@ -212,7 +213,7 @@
 
 
     <!-- Footer Section -->
-    <footer class="foot text-white p-8">
+    <footer id="foot" class="foot text-white p-8">
 
         <div class="max-w-6xl mx-auto">
             <!-- Main content with three columns -->
@@ -266,10 +267,32 @@
 
     </footer>
 
-
-
     
 
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js" integrity="sha512-+/4Q+xH9jXbMNJzNt2eMrYv/Zs2rzr4Bu2thfvzlshZBvH1g+VGP55W8b6xfku0c0KknE7qlbBPhDPrHFbgK4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+    
+
+    
 </body>
 
 

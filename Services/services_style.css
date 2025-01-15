@@ -131,7 +131,7 @@ nav a:hover {
     transform: scale(1.1);
     z-index: 2;
     transition: all 0.3s ease;
-    margin: 0 20px;
+    margin: 0 40px;
 }
 
 .card:not(.active) {
@@ -180,6 +180,9 @@ background: none !important;
 box-shadow: none !important;
 color: transparent !important;
 }
+
+
+
 .card-description {
 display: none;
 
@@ -197,11 +200,7 @@ font-size: 16px;
             transition: all 0.3s ease;
 }
 
-.card.active .card-description {
-display: block;
-opacity: 1;
-visibility: visible;
-}
+
 
 .use {
 font-family: 'Exo 2', sans-serif;
