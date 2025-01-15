@@ -56,23 +56,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function rippleEffect(){
-    $('#header').ripples({
-        resolution: 512,
-        dropRadius: 20,
-        perturbance: 0.04
-      });
-}
 
-if(width>1200){
-    rippleEffect();
-}
 
-if(width>550){                                                
-    Shery.mouseFollower({
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        skew: true,
-        duration: 1,
-    });
+
+
+//Locomotive Scroll
+function initLocomotive() {
+    gsap.registerPlugin(ScrollTrigger);
     
+    // Initialize Locomotive Scroll
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector(".main"),
+        smooth: true,
+        multiplier: 1,
+        class: "is-revealed",
+        getDirection: true,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
+    });
+
+    // Each time Locomotive Scroll updates, tell ScrollTrigger to update too
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    // Tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        },
+        pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+    });
+
+    // Each time the window updates, refresh ScrollTrigger and then update LocomotiveScroll
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    // After everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
 }
+
+// Initialize when the DOM is ready
+document.addEventListener('DOMContentLoaded', initLocomotive);
+
+
+
