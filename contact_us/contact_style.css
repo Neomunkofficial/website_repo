@@ -64,7 +64,9 @@ html.has-scroll-smooth {
 }
 
 
-
+#head span{
+  display:inline-block;
+}
 
 
 /* Our value card animation*/
@@ -90,7 +92,15 @@ html.has-scroll-smooth {
 }
 
 
-
+#cursor{
+  height:15px;
+  width:15px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 99;
+  position: fixed;
+  }
+  
 
 
 

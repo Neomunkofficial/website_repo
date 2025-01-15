@@ -1599,4 +1599,3 @@ gsap.from(".section13>.bottom h3",{
     duration: 3,
     ease: "elastic.out(1, 0.7)"
 })
-
