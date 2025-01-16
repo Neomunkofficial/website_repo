@@ -83,18 +83,5 @@ function initLocomotive() {
 // Initialize when the DOM is ready
 document.addEventListener('DOMContentLoaded', initLocomotive);
 
-var crsr=document.querySelector("#cursor")
 
-document.addEventListener("mousemove",function(dets){  
-    crsr.style.left=dets.x+"px"
-    crsr.style.top=dets.y+"px"
-    
-    
-})
 
-Shery.mouseFollower({
-    //Parameters are optional.
-    skew: true,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
