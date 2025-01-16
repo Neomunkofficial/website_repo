@@ -4,10 +4,9 @@
   "description": "visit live link: [https://infosysss.netlify.app](https://infosysss.netlify.app/)",
   "main": "script.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
-    "build": "tailwindcss -i ./src/styles/style.css -o ./dist/style.css --minify",
-    "postbuild": "cp index.html dist/"
-    
+    "build": "npx tailwindcss -i ./src/styles/style.css -o ./dist/style.css --minify",
+    "postbuild": "cp index.html dist/",
+    "postinstall": "chmod +x node_modules/.bin/tailwindcss"
   },
   "repository": {
     "type": "git",
