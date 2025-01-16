@@ -1,9 +1,3 @@
-
-import $ from 'jquery'
-let selectedServices = new Set();
-let selectedBudget = 'More than 50K'; // Default value
-
-
 // Add scroll reveal animation
 const observerOptions = {
     threshold: 0.1,
@@ -104,12 +98,4 @@ function initLocomotive() {
 // Initialize when the DOM is ready
 document.addEventListener('DOMContentLoaded', initLocomotive);
 
-var crsr=document.querySelector("#cursor")
-
-document.addEventListener("mousemove",function(dets){  
-    crsr.style.left=dets.x+"px"
-    crsr.style.top=dets.y+"px"
-    
-    
-})
 

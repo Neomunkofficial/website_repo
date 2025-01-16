@@ -1,5 +1,3 @@
-import Shery from "sheryjs";
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get all team cards
     const teamCards = document.querySelectorAll('.team-card');
@@ -82,6 +80,3 @@ function initLocomotive() {
 
 // Initialize when the DOM is ready
 document.addEventListener('DOMContentLoaded', initLocomotive);
-
-
-
