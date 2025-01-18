@@ -696,7 +696,7 @@ span {
   gap: 1vw;
 
   .box{
-      width: calc(100vw/6);
+      width: calc(100vw/3);
       height: 100%;
       background-color: #F1F2F3;
       border-radius: 50px;
@@ -989,7 +989,7 @@ display: none; /* Hides section6 completely */
 
 .section8{
   width: 100%;
-  height: 130vh;
+  height: 150vh;
   background-color: #FFFFFF;
   /* background-color: #843d7f78;    */
   display: grid;

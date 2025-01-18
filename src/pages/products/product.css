@@ -52,6 +52,9 @@
     gap: 9vw; /* Space between menu items */
     align-items: space-between;
   }
+  #contact{
+    margin-right: 85px;
+  }
   
   nav a {
     text-decoration: none;

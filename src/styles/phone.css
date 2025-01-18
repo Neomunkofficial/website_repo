@@ -808,19 +808,18 @@ nav{
  
 }
 .section5{
-margin-top:80vh;
+margin-top:vh;
 }
 
 .section7{
   height: 50vh;
-  margin-top: 30vh;
+ 
   
 }
 .section8{
-
+height: 160vh;
 }
 .section9{
-margin-top: 60vh;
   /* background-color: firebrick; */
 .bottom {
     .scroller {
@@ -845,10 +844,25 @@ padding: 2vh 2vw 2vh 2vw;
 }
 
 .one{
+  margin-top: 4vh;
   border-top: 1px solid #1010103c;
   .use{
+    margin-top: 5vh;
     margin-bottom: 2vh;
     line-height: 2vh;
+  }
+}
+.two{
+  .use{
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+  }
+}
+
+.three{
+  .use{
+    margin-top: 7vh;
+    margin-bottom: 2vh;
   }
 }
 
